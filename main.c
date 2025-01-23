@@ -3,7 +3,6 @@
 // Created: 2024-11-29
 // By: Nina Temridiwong
 
-
 /************************************Includes***************************************/
 
 #include "G8RTOS/G8RTOS.h"
@@ -24,12 +23,12 @@
 
 /************************************MAIN*******************************************/
 
-int main(void  )
+int main(void)
 {
-    // Sets clock speed to 80 MHz. You'll need it!
+    // Sets clock speed to 80 MHz.
     SysCtlClockSet(SYSCTL_SYSDIV_2_5 | SYSCTL_USE_PLL | SYSCTL_OSC_MAIN | SYSCTL_XTAL_16MHZ);
-    // You might want a delay here (~10 ms) to make sure the display has powered up
-    SysCtlDelay(SysCtlClockGet()/100);
+    // A 10 ms delay to make sure the display has powered up
+    SysCtlDelay(SysCtlClockGet() / 100);
 
     // Initialize the G8RTOS framework
     G8RTOS_Init();
@@ -51,16 +50,10 @@ int main(void  )
 
     // Periodic Thread
     G8RTOS_Add_PeriodicEvent(Clock_Thread, 1000, 0);
-//    Draw_Sprite(Age_Icon, 31, 9, ST7789_BLUE, 4);
-//    Draw_Sprite(Scale_Icon, 32, 30, ST7789_BLUE, 4);
-//    Draw_Sprite(Sprite_One, 18, 10, ST7789_BLUE, 4);
-//    Draw_Sprite(Sprite_Two, 12, 10, ST7789_BLUE, 4);
-//    Draw_Sprite(Sprite_Zero, 6, 10, ST7789_BLUE, 4);
-//    Draw_Sprite(Sprite_Year, 3, 12, ST7789_BLUE, 4);
-//    Draw_Sprite(Sprite_Ounce, 3, 32, ST7789_BLUE, 4);
 
     G8RTOS_Launch();
-    while (1);
+    while (1)
+        ;
 }
 
 /************************************MAIN*******************************************/
