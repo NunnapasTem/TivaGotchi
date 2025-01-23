@@ -1,14 +1,17 @@
-// vect3d.h
-// Date Created: 2023-07-26
-// Date Updated: 2023-07-26
-// 3d vector declarations and structure
+// multimod_uart.h
+// Date Created: 2023-07-25
+// Date Updated: 2023-07-27
+// UART header file
 
-#ifndef VECT3D_H_
-#define VECT3D_H_
+#ifndef MULTIMOD_UART_H_
+#define MULTIMOD_UART_H_
 
 /************************************Includes***************************************/
 
 #include <stdint.h>
+#include <stdbool.h>
+
+#include <uartstdio.h>
 
 /************************************Includes***************************************/
 
@@ -16,31 +19,29 @@
 /*************************************Defines***************************************/
 
 /******************************Data Type Definitions********************************/
-
-// Vector x, y, z
-typedef struct Vect3D_t { 
-    float x, y, z;
-} Vect3D_t ;
-
 /******************************Data Type Definitions********************************/
 
 /****************************Data Structure Definitions*****************************/
 /****************************Data Structure Definitions*****************************/
 
+/***********************************Externs*****************************************/
+/***********************************Externs*****************************************/
+
 /********************************Public Variables***********************************/
 /********************************Public Variables***********************************/
 
 /********************************Public Functions***********************************/
 
-void Vect3D_Add(Vect3D_t* result, Vect3D_t* v1, Vect3D_t* v2);
-void Vect3D_Mul(Vect3D_t* result, Vect3D_t* v1, Vect3D_t* v2);
-void Vect3D_Sub(Vect3D_t* result, Vect3D_t* v1, Vect3D_t* v2);
-void Vect3D_Normalize_(Vect3D_t* v);
-float Vect3D_GetMag(Vect3D_t* v);
-void Vect3D_GetInverse(Vect3D_t* result, Vect3D_t* v);
+void UART_Init();
 
 /********************************Public Functions***********************************/
 
+/*******************************Private Variables***********************************/
+/*******************************Private Variables***********************************/
 
-#endif /* VECT3D_H_ */
+/*******************************Private Functions***********************************/
+/*******************************Private Functions***********************************/
+
+#endif /* MULTIMOD_UART_H_ */
+
 
