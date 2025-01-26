@@ -36,18 +36,19 @@
     <li>
       <a href="#about-the-project">About The Project</a>
       <ul>
+        <li><a href="#current-features">Current Features</a></li>
+        <li><a href="#whats-next">What's Next?</a></li>
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
-    <li><a href="#Game Instruction">Game Instruction</a></li>
+    <!-- <li><a href="#Game Instruction">Game Instruction</a></li> -->
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
-    <!-- <li><a href="#acknowledgments">Acknowledgments</a></li> -->
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
   </ol>
 </details>
 
 <!-- ABOUT THE PROJECT -->
-
 ## About The Project
 
 TivaGotchi is a Tamagotchi-inspired project designed by TM4C123GH6PM microcontrollers and powered by G8RTOS. This project started as a way to bring my childhood dream of owning a <a href="https://tamagotchi.fandom.com/wiki/Tamagotchi_(1996_Pet)">Tamagotchi P1</a> to life. As a part of the project, I implemented priority scheduling, critial sections, inter-process communication and semaphores of G8RTOS to manage MCU resources. The project also integrates various peripherals, including LEDs, an LCD display, and buttons, along with custom drivers to enhance functionality. 
@@ -62,26 +63,33 @@ TivaGotchi is a Tamagotchi-inspired project designed by TM4C123GH6PM microcontro
 
 - **LCD Display:** The LCD display is communicated with Tiva C via SPI. See <a href="https://github.com/NunnapasTem/TivaGotchi/blob/main/MultimodDrivers/src/multimod_ST7789.c">multimod_ST7789.C</a> for further information on the driver.
 - **Draw Sprites:** All sprites are stored as 32x32 px C arrays in <a href="https://github.com/NunnapasTem/TivaGotchi/blob/main/Pixel.h">Pixel.h</a>. Draw_Sprite() is the middle man between SPI driver and game logics to draw sprites to a specified size and location.
-- **LEDs:** The LEDs signal when your Tama needs an attention i.e. got sick, needs to use the toilet etc.  
+- **LEDs:** The LEDs signal when your Tama needs an attention i.e. got sick, needs to use the toilet etc. The LEDs are controlled via an I2C-driven LED Driver.
+- **Game Functionalities:** There are 8 primary game functions. Five of which are fully/partially implemented. 
+These functions include: 
+  * Feed Function (Partially implemented)
+  * Sleep Function
+  * Cure Function
+  * Toilet Function
+  * Tama Status Function (Partially implemented)
+
 ### What's Next?
-- 
+- Implement all 8 primary game functions as mentioned above. 
+- Implement Bluetooth option to communicate with other TivaGotchi Device.
 
 ### Built With
-
 - **Languages:** ARM Assembly, C
 - **Hardware:** Tiva Launchpad, I2C GPIO Expander (PCA9555PW), NRF5, PWM Driver (PCA9956b), LCD display (ST7789)
 - **Tools/Libraries:** G8RTOS, TivaWare Peripheral Driver Library, Stellaris ICDI
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-
+<!-- 
 ## Game Instruction
-
-TODO
+TODO -->
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-<!-- LICENSE -->
 
+<!-- LICENSE -->
 ## License
 
 Distributed under the project_license. See `LICENSE` for more information.
@@ -89,10 +97,9 @@ Distributed under the project_license. See `LICENSE` for more information.
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTACT -->
-
 ## Contact
 
-_Nunnapas (Nina) Temridiwong_ - ntemridiwong@gmail.com
+Nunnapas (Nina) Temridiwong - ntemridiwong@gmail.com
 
 Project Link: [https://github.com/NunnapasTem/TivaGotchi](https://github.com/NunnapasTem/TivaGotchi)
 
@@ -100,11 +107,11 @@ Project Link: [https://github.com/NunnapasTem/TivaGotchi](https://github.com/Nun
 
 <!-- ACKNOWLEDGMENTS -->
 
-<!-- ## Acknowledgments
+## Acknowledgments
+I'd  like to thank the following individuals for their contributions and support. 
+- [Dr. Md Jahidul Islam](https://jahid.ece.ufl.edu/) - For deepening my understanding of RTOS and Microprocessors during EEL4745C at UF
+- [Mehron Talebi]() - For extremely helpful advices throughout EEL4745C and the working of this project.
 
-- []()
-- []()
-- []() -->
 
 <!--<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
