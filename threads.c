@@ -132,6 +132,7 @@ void Draw_Menu()
     }
 }
 
+// TODO
 void Draw_Food()
 {
 }
@@ -140,9 +141,6 @@ void Flush_Poop()
 {
     // Reset poop timer
     Tama->poop = 10;
-
-    // Draw flush poop
-
     // Clear screen
     current_menu = OTHER;
 }
@@ -206,7 +204,6 @@ void Draw_Health()
 
 void Idle_Thread(void)
 {
-
     while (1)
         ;
 }
@@ -331,9 +328,6 @@ void Clock_Thread()
         if (tama_time % 5 == 0)
         {
             Tama->poop--;
-            //            if (Tama->poop <= 0) {
-            //                Draw_Sprite(Sprite_Poop, 0, SPRITE_OFFSET_Y, ST7789_BLUE, 4);
-            //            }
         }
 
         // Check tama's status need to changed to dead
