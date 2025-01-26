@@ -86,8 +86,8 @@ These functions include:
 <!-- 
 ## Game Instruction
 TODO -->
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<!-- 
+<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 <!-- LICENSE -->
 ## License
